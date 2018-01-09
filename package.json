@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "start": "react-scripts start",
-    "storybook": "start-storybook -p 3001 -c .storybook",
+    "sb": "start-storybook -p 3001 -c .storybook",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -16,7 +16,8 @@
     "react-scripts": "1.0.17"
   },
   "devDependencies": {
-    "@sambego/storybook-state": "^1.0.6",
+    "@storybook/addon-knobs": "^3.3.6",
+    "@storybook/addon-options": "^3.3.6",
     "@storybook/react": "^3.3.1"
   }
 }

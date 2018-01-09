@@ -1,23 +1,16 @@
 import React from 'react';
 import Button from 'material-ui/Button';
-import Menu, { MenuItem } from 'material-ui/Menu';
 
-import { State, Store } from '@sambego/storybook-state';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-
-const store = new Store({
-  disabled: false,
-  type: '',
-  text: 'Btn Text',
-
-  menuOpen: false,
-  menuAnchorEl: null
-});
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/react';
 
 storiesOf('Button', module)
-  .add('Flat', () => (
-    <State store={store}>
-      <Button disabled="disabled" color={store.get('type')}>{ store.get('text') }</Button>
-    </State>
-  ));
+  .addDecorator(withKnobs)
+  .add('Flat', () => {
+    const label = 'Type';
+    const options = ['default', 'primary', 'accent'];
+    const defaultValue = 'default';
+    const btnType = select(label, options, defaultValue);
+
+    return (<Button disabled={boolean('Disabled', false)} color={btnType}>{text('Label', 'Sample Text')}</Button>);
+  });
