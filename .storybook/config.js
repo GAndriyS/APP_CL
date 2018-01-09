@@ -1,7 +1,7 @@
 import { configure } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 
-setOptions({ downPanelInRight: true });
+setOptions({ addonPanelInRight: true });
 
 function loadStories() {
   require('../stories/button.js');

@@ -12,5 +12,10 @@ storiesOf('Button', module)
     const defaultValue = 'default';
     const btnType = select(label, options, defaultValue);
 
-    return (<Button disabled={boolean('Disabled', false)} color={btnType}>{text('Label', 'Sample Text')}</Button>);
+    return (
+      <Button
+        disabled={boolean('Disabled', false)}
+        color={btnType}>{text('Label', 'Sample Text')}
+      </Button>
+    );
   });
