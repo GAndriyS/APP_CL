@@ -1,0 +1,25 @@
+{
+  "name": "app_cl",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "react-scripts start",
+    "sb": "start-storybook -p 3001 -c .storybook",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "material-ui": "^1.0.0-beta.26",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-knobs": "^3.3.6",
+    "@storybook/addon-options": "^3.3.6",
+    "@storybook/react": "^3.3.1"
+  }
+}
