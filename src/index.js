@@ -6,7 +6,6 @@ import { createStore } from 'redux'
 
 import { userInfo } from './reducers/user-info';
 import App from './app/App';
-import registerServiceWorker from './registerServiceWorker';
 
 import './index.css';
 
@@ -19,4 +18,3 @@ ReactDOM.render((
     </Provider>
   </BrowserRouter>
 ), document.getElementById('root'));
-registerServiceWorker();
